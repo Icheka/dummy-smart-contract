@@ -1,0 +1,30 @@
+{
+  "name": "inbox",
+  "version": "1.0.0",
+  "description": "Boilerplate code for setting up a new start contract using Solidity 0.4.17.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.5.1",
+    "ganache-cli": "^6.12.2",
+    "mocha": "^9.2.1",
+    "solc": "^0.4.17",
+    "web3": "^1.0.0-beta.26"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Icheka/dummy-smart-contract.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Icheka/dummy-smart-contract/issues"
+  },
+  "homepage": "https://github.com/Icheka/dummy-smart-contract#readme"
+}
