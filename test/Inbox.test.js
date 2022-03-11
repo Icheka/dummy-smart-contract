@@ -11,6 +11,8 @@ let accounts;
 let inbox;
 const initialMessage = 'Hi, there!';
 
+const getMessage = async () => await inbox?.methods?.message()?.call();
+
 beforeEach(async () => {
     // get a list of accounts
     accounts = await web3.eth.getAccounts();
@@ -28,14 +30,14 @@ describe('Inbox::', () => {
     });
 
     it(`default message is ${initialMessage}`, async () => {
-        const message = await inbox.methods.message().call();
+        const message = await getMessage();
         assert.equal(message, initialMessage);
     });
 
     it('can set a new message', async () => {
         const newMessage = 'Hello, world!';
         await inbox.methods.setMessage(newMessage).send({ from: accounts[0], gas: '1000000' });
-        const messageNow = await inbox.methods.message().call();
+        const messageNow = await getMessage();
 
         assert.equal(messageNow, newMessage);
     });
